@@ -38,6 +38,7 @@ class Outro(Slide):
             Text("Learn more about Manim Slides:"),
             Text("https://manim-slides.eertmans.be"),
         ).arrange(DOWN)
+        self.play(FadeIn(learn_more))
 
 class PlotExample(Slide):
     def construct(self):
@@ -78,4 +79,3 @@ class PlotExample(Slide):
         self.play(Create(plot_axes), Create(plot_labels), Create(extras))
         self.next_slide()
         self.play(AnimationGroup(*[Create(plot) for plot in plots], lag_ratio=0.05))
-        self.play(FadeIn(learn_more))
